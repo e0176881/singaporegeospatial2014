@@ -1,0 +1,374 @@
+﻿/*--------------------------WindowPopUpBoxes---------------------------*/
+
+
+/*--------------------------Buffer---------------------------*/
+.bufferButton
+{
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font: 14px/100% Arial, Helvetica, sans-serif;
+    padding: .2em 1.2em .25em;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    margin-top: 5px;
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    width: 170px;
+}
+.bufferButton:hover
+{
+    text-decoration: none;
+}
+.bufferButton:active
+{
+    position: relative;
+    top: 1px;
+}
+
+.orange
+{
+    font-family: Calibri;
+    font-size: 14px;
+    color: #FFF7F2;
+    border: solid 1px #FF802B;
+    background: #FF781F;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFA569), to(#FF781F));
+    background: -moz-linear-gradient(top,  #FFA569,  #FF781F);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFA569', endColorstr='#FF781F');
+}
+.orange:hover
+{
+    background: #FF781F;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFB07A), to(#FF8536));
+    background: -moz-linear-gradient(top,  #FFB07A,  #FF8536);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFB07A', endColorstr='#FF8536');
+}
+.orange:active
+{
+    color: #FFDBC4;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FF781F), to(#FFAB73));
+    background: -moz-linear-gradient(top,  #FF781F,  #FFAB73);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF781F', endColorstr='#FFAB73');
+}
+
+#Inner, #Outer
+{
+    width: 100px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#centerBuffer
+{
+    margin-left: 40px;
+}
+
+#divDistanceBuffer
+{
+    margin-top: 20px;
+}
+
+/*--------------------------Query---------------------------*/
+
+.queryButton
+{
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font: 14px/100% Arial, Helvetica, sans-serif;
+    padding: .2em 1.2em .25em;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    margin-top: 5px;
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.queryButton:hover
+{
+    text-decoration: none;
+}
+.queryButton:active
+{
+    position: relative;
+    top: 1px;
+}
+
+#btnPolygon
+{
+    background-image: url(../Images/PopUpWindowImg/Polygon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btnFreeHandPolygon
+{
+    background-image: url(../Images/PopUpWindowImg/FreehandPolygon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btnDeactivateDrawing
+{
+    background-image: url(../Images/PopUpWindowImg/Deactivate.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.queryOrange
+{
+    font-family: Calibri;
+    font-size: 14px;
+    color: #FFF7F2;
+    border: solid 1px #FF802B;
+    background: #FF781F;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFA569), to(#FF781F));
+    background: -moz-linear-gradient(top,  #FFA569,  #FF781F);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFA569', endColorstr='#FF781F');
+}
+.queryOrange:hover
+{
+    background: #FF781F;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFB07A), to(#FF8536));
+    background: -moz-linear-gradient(top,  #FFB07A,  #FF8536);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFB07A', endColorstr='#FF8536');
+}
+.queryOrange:active
+{
+    color: #FFDBC4;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FF781F), to(#FFAB73));
+    background: -moz-linear-gradient(top,  #FF781F,  #FFAB73);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF781F', endColorstr='#FFAB73');
+}
+
+#centerQuery
+{
+    display: inline-table;
+    margin-top: 30px;
+}
+
+#btnTraffic
+{
+    background-image: url(../Images/PopUpWindowImg/LiveTraffic.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btnTrafficClick
+{
+    background-image: url(../Images/PopUpWindowImg/LiveTrafficClick.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btnWeather
+{
+    background-image: url(../Images/PopUpWindowImg/LiveWeather.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btnHeatMap1
+{
+    background-image: url(../Images/PopUpWindowImg/HeatMap1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#btnHeatMap2
+{
+    background-image: url(../Images/PopUpWindowImg/HeatMap2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/*--------------------------Info Template---------------------------*/
+
+
+#btnBufferPoint
+{
+    background-image: url(../Images/InfoTemplate/Buffer.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    -moz-background-size: 17px 17px;
+    -o-background-size: 17px 17px;
+    -webkit-background-size: 17px 17px;
+    background-size: 17px 17px;
+    background-color: white;
+}
+
+#btnSafetyAnalysis
+{
+    background-image: url(../Images/InfoTemplate/Safety.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    -moz-background-size: 17px 17px;
+    -o-background-size: 17px 17px;
+    -webkit-background-size: 17px 17px;
+    background-size: 17px 17px;
+    background-color: white;
+}
+
+#btnRecentTraffic
+{
+    background-image: url(../Images/InfoTemplate/Traffic.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    -moz-background-size: 17px 17px;
+    -o-background-size: 17px 17px;
+    -webkit-background-size: 17px 17px;
+    background-size: 17px 17px;
+    background-color: white;
+}
+
+#btnSafetyMeasure
+{
+    background-image: url(../Images/InfoTemplate/SafetyLevel.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    -moz-background-size: 17px 17px;
+    -o-background-size: 17px 17px;
+    -webkit-background-size: 17px 17px;
+    background-size: 17px 17px;
+    background-color: white;
+}
+
+#btnSafetyMeasure2
+{
+    background-image: url(../Images/InfoTemplate/SafetyCase.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    -moz-background-size: 17px 17px;
+    -o-background-size: 17px 17px;
+    -webkit-background-size: 17px 17px;
+    background-size: 17px 17px;
+    background-color: white;
+}
+
+.infoTempButton
+{
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font: 14px/100% Arial, Helvetica, sans-serif;
+    padding: .25em .9em .25em;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    margin-top: 5px;
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    border: solid 1px #FF802B;
+}
+.infoTempButton:hover
+{
+    text-decoration: none;
+}
+.infoTempButton:active
+{
+    position: relative;
+    top: 1px;
+}
+
+/*--------------------------Canvas---------------------------*/
+
+#canvasHis
+{
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+
+/*--------------------------HealthCare---------------------------*/
+
+#btnHandPoint
+{
+    background-image: url(../Images/PopUpWindowImg/HandPoint.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    -moz-background-size: 17px 17px;
+    -o-background-size: 17px 17px;
+    -webkit-background-size: 17px 17px;
+    background-size: 17px 17px;
+    background-color: white;
+    
+}
+
+/*--------------------------Live Traffic Info Window Button---------------------------*/
+
+#btnHosPoint
+{
+    background-image: url(../Images/InfoTemplate/HospitalPoint.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    -moz-background-size: 17px 17px;
+    -o-background-size: 17px 17px;
+    -webkit-background-size: 17px 17px;
+    background-size: 17px 17px;
+    background-color: white;
+}
+
+#btnClinicPoint
+{
+    background-image: url(../Images/InfoTemplate/ClinicPoint.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    -moz-background-size: 17px 17px;
+    -o-background-size: 17px 17px;
+    -webkit-background-size: 17px 17px;
+    background-size: 17px 17px;
+    background-color: white;
+}
+
+#btnFirePoint
+{
+    background-image: url(../Images/Features/FireStation.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    -moz-background-size: 17px 17px;
+    -o-background-size: 17px 17px;
+    -webkit-background-size: 17px 17px;
+    background-size: 17px 17px;
+    background-color: white;
+}
+
+#btnPolicePoint
+{
+    background-image: url(../Images/Features/PoliceStation.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    -moz-background-size: 17px 17px;
+    -o-background-size: 17px 17px;
+    -webkit-background-size: 17px 17px;
+    background-size: 17px 17px;
+    background-color: white;
+}
+
+/*--------------------------Safety Analysis Info Window Button---------------------------*/
+
+#btnMultiRouteBusStop
+{
+        background-image: url(../Images/InfoTemplate/MultiRoute.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    -moz-background-size: 17px 17px;
+    -o-background-size: 17px 17px;
+    -webkit-background-size: 17px 17px;
+    background-size: 17px 17px;
+    background-color: white;
+}

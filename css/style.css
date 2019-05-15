@@ -1,0 +1,32 @@
+.page-header
+{
+	margin-top:0;
+}
+.panel-body
+{
+	padding-top:0px;
+}
+.inline
+{
+	 display:inline-block;
+	 padding-left:200px;
+}
+.inline1
+{
+	 display:inline-block;
+	 
+}
+.padd
+{
+	padding-left:25px;
+}
+.paddright
+{
+	padding-right:25px;
+}
+.center
+{
+	margin:auto;
+	width:250px;
+}
+ 

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Twitter</title>
+
+
+<!-- jQuery and jQuery UI are required dependencies. -->
+<!-- Although we use jQuery 1.4 here, it's tested with the latest too (1.8.3 as of writing this.) -->
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+	type="text/javascript" charset="utf-8"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"
+	type="text/javascript" charset="utf-8"></script>
+<script src="http://connect.facebook.net/en_US/all.js"></script>
+</head>
+<body>
+
+	
+	
+
+<div id="fb-root"></div>
+	<script>
+
+
+	    window.fbAsyncInit = function () {
+	        FB.init({
+	            appId: '316975208433000',
+	            status: true,
+	            xfbml: true
+	        });
+
+	        FB.login(function (response) {
+	            // handle the response
+	        }, { scope: 'email,user_birthday,status_update,publish_stream,user_about_me,user_location,user_checkins,user_status,friends_status,friends_checkins,friends_location' });
+
+	        FB.getLoginStatus(function (response) {
+	            if (response.status === 'connected') {
+	                var uid = response.authResponse.userID;
+	                accessToken = response.authResponse.accessToken;
+	                var id = '644337815639241';
+	               
+	                //  var tag = "Lee Hsien Loong";
+	                FB.api('/479070608822911/events' , function (info) {
+
+	                    console.log(info);
+	                 
+	                    for (var i = 0; i < info.data.length; i++) {
+	                        var newtimezone;
+	                            if(info.data[i].timezone == undefined)
+								{
+								info.data[i].timezone = 'unknown';
+								}
+	                            document.getElementById('welcome').innerHTML += "Event: " + info.data[i].name + "<br>" +
+								"StartDate : " + info.data[i].start_time + "<br>" +
+								"Timezone : " + info.data[i].timezone + "<br>" +
+								"Location : " + info.data[i].location + "<br>"  + "<br>" ;
+	                        
+	                    }
+
+	                });
+					
+					 
+					 FB.api('/479070608822911/posts' , function (infoz) {
+
+	                    console.log(infoz);
+	               
+	                    for (var i = 0; i < infoz.data.length; i++) {
+	                       if(infoz.data[i].message != undefined)
+						   {
+	                          document.getElementById('welcome').innerHTML += "Message: " + infoz.data[i].message + "<br>" ;
+							window['postid'] = infoz.data[i].object_id;
+							
+							
+	                       }
+						 
+	                    }
+
+	                });
+					
+					  FB.api('/"' + window['postid'] + '"', function (infozz) {
+                      alert(window['postid']);
+	                    console.log(infozz);
+						
+	                });
+	            };
+	        });
+	    }
+		(function (d, s, id) {
+		    var js, fjs = d.getElementsByTagName(s)[0];
+		    if (d.getElementById(id)) {
+		        return;
+		    }
+		    js = d.createElement(s);
+		    js.id = id;
+		    js.src = "//connect.facebook.net/en_US/all.js";
+		    fjs.parentNode.insertBefore(js, fjs);
+		} (document, 'script', 'facebook-jssdk'));
+		
+	
+	
+	
+
+	
+	
+	</script>
+	
+	<div id="welcome"></div>
+</body>
+</html>
+

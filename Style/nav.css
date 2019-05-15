@@ -1,0 +1,217 @@
+﻿nav
+{
+    font-family: Calibri, Helvetica, sans-serif;
+    font-size: 14px;
+    width: 100%;
+    font-weight: bold;
+}
+
+nav ul
+{
+    list-style: none;
+    background: #2d2d2d;
+    margin: 0;
+    padding: 0;
+    padding-left: 2em;
+}
+
+nav li
+{
+    display: inline-block;
+    float: left;
+}
+
+nav a
+{
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: #bbbbbb;
+    border-top: 2px solid transparent;
+}
+
+/* Hyperlink */
+
+nav li.active a
+{
+}
+
+nav a:hover
+{
+    background: #3d3d3d;
+    color: White;
+    width: auto;
+}
+
+.clearFloat
+{
+    clear: both;
+}
+
+
+ul li
+{
+    float: left;
+    display: inline;
+    position: relative;
+    width: auto;
+}
+
+ul li ul li
+{
+    width: 100%;
+}
+
+nav ul ul
+{
+    visibility: hidden;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 99999;
+    box-shadow: 1px 1px 3px #ccc;
+    -webkit-box-shadow: 1px 1px 3px #ccc;
+    -moz-box-shadow: 1px 1px 3px #ccc;
+    -o-box-shadow: 1px 1px 3px #ccc; /* css3 transitions for smooth hover effect */
+    transition: All 0.3s ease-in-out;
+    -webkit-transition: All 0.3s ease-in-out;
+    -moz-transition: All 0.3s ease-in-out;
+    -o-transition: All 0.3s ease-in-out;
+}
+
+ul ul li ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 0; /*the next 2 styles are very important,  	being the ones which make the drop-down to stay hidden */
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    z-index: 99999;
+    background: #f8f8f8;
+}
+
+ul li:hover > ul /* Making Drop Down Visible*/
+{
+    background-color: #2d2d2d;
+    visibility: visible;
+    opacity: 1;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+}
+
+ul ul li
+{
+    /*Drop Down CSS*/
+    clear: both;
+    width: auto;
+    border: 0 none;
+    border-top: 1px solid #c9c9c9;
+}
+
+ul ul li a
+{
+    padding: 7px 15px;
+    color: #bbbbbb;
+    display: inline-table;
+    border: 0 none;
+    float: left;
+    clear: both;
+}
+
+ul ul li a:hover
+{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+}
+
+.activeItem
+{
+    background: #3d3d3d;
+    color: #ffffff;
+    border-top: 2px solid #ff4800;
+    
+    border-radius: 3px;
+    -o-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    
+    animation: rainbow 3s;
+    -moz-animation: rainbow 3s; /* Firefox */
+    -webkit-animation: rainbow 3s; /* Safari and Chrome */
+    -o-animation: rainbow 3s; /* Opera */
+    
+    animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    
+    -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+    -o-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+.deactivateItem
+{
+    background: #2d2d2d;
+    color: #bbbbbb;
+    border-top: 2px solid #2d2d2d;
+    border-radius: 0;
+    -o-border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+}
+
+@keyframes rainbow
+{
+0% {border-color:#FF2E2E;}
+15%{border-color:orange;}
+30%{border-color:yellow;}
+45%{border-color:#00FF00;}
+60%{border-color:#17AEFF;}
+75%{border-color:purple;}
+100%{border-color:violet;}
+}
+
+@-moz-keyframes rainbow 
+{
+0% {border-color:#FF2E2E;}
+15%{border-color:orange;}
+30%{border-color:yellow;}
+45%{border-color:#00FF00;}
+60%{border-color:#17AEFF;}
+75%{border-color:purple;}
+100%{border-color:violet;}
+}
+
+@-webkit-keyframes rainbow 
+{
+0% {border-color:#FF2E2E;}
+15%{border-color:orange;}
+30%{border-color:yellow;}
+45%{border-color:#00FF00;}
+60%{border-color:#17AEFF;}
+75%{border-color:purple;}
+100%{border-color:violet;}
+}
+
+@-o-keyframes rainbow 
+{
+0% {border-color:#FF2E2E;}
+15%{border-color:orange;}
+30%{border-color:yellow;}
+45%{border-color:#00FF00;}
+60%{border-color:#17AEFF;}
+75%{border-color:purple;}
+100%{border-color:violet;}
+}
